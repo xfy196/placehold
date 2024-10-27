@@ -3,9 +3,9 @@ import { Hono, type Context } from "hono";
 import sharp, { type AvailableFormatInfo, type FormatEnum } from "sharp";
 import mime from "mime";
 const app = new Hono();
-interface ImageInfo  {
-  width: number;
-  height: number;
+interface ImageInfo {
+  width?: number;
+  height?: number;
   textColor?: string;
   bgColor?: string;
   ext?: string;
@@ -19,31 +19,73 @@ app.get("/:param", async (c: Context) => {
   match = param.match(/^(\d+)\.(\w+)?$/);
   if (match) {
     const [, width, ext = "png"] = match;
-   return await sendImageBuffer({
-    width: Number(width),
-    height: Number(width),
-    ext
-   }, c)
+    return await sendImageBuffer(
+      {
+        width: Number(width),
+        height: Number(width),
+        ext,
+      },
+      c
+    );
   }
   // // 不是数字判断分割符号是否存在
   match = param.match(/^(\d+)x(\d+)(\.\w+)?$/);
   if (match) {
     const [, width, height, ext = "png"] = match;
-    return await sendImageBuffer({
-      width: Number(width),
-      height: Number(height),
-      ext
-    }, c)
+    return await sendImageBuffer(
+      {
+        width: Number(width),
+        height: Number(height),
+        ext,
+      },
+      c
+    );
   }
-  return c.text("Hello Hono!");
+  return await sendImageBuffer(
+    {
+      is404: true,
+    },
+    c
+  );
+});
+
+app.get("/:size/:ext", async (c: Context) => {
+  const { size, ext = 'png' } = c.req.param();
+  let match = null;
+  // 判断 size
+  match = size.match(/^(\d+)$/);
+  if (match) {
+    const [, width] = match;
+    return await sendImageBuffer(
+      {
+        width: Number(width),
+        height: Number(width),
+        ext,
+      },
+      c
+    );
+  }
+   // // 不是数字判断分割符号是否存在
+   match = size.match(/^(\d+)x(\d+)(\.\w+)?$/);
+   if (match) {
+     const [, width, height] = match;
+     return await sendImageBuffer(
+       {
+         width: Number(width),
+         height: Number(height),
+         ext,
+       },
+       c
+     );
+   }
 });
 
 const port = 3000;
 console.log(`Server is running on port ${port}`);
 
 async function generatePlaceholdImg({
-  width,
-  height,
+  width = 600,
+  height = 400,
   textColor = "#999999",
   bgColor = "#dddddd",
   type = "png",
@@ -61,8 +103,10 @@ async function generatePlaceholdImg({
   const fontSize = Math.min(width, height) / 6;
   const svgText = `
     <svg width="${width}" height="${height}">
-      <text x="50%" y="50%" dy=".3em" text-anchor="middle" font-size="${fontSize}" font-family="Arial" fill="${textColor}">
-         ${is404 ? "404" : width + " x " + height}
+      <text x="50%" y="50%" dy=".3em" text-anchor="middle" font-size="${fontSize}" font-family="Arial" fill="${
+    is404 ? "#32343b" : textColor
+  }">
+         ${is404 ? "4 0 4" : width + " x " + height}
       </text>
     </svg>
   `;
@@ -72,26 +116,33 @@ async function generatePlaceholdImg({
     .toBuffer();
   return buffer;
 }
-async function sendImageBuffer({
-  width,
-  height,
-  textColor = "#999999",
-  bgColor = "#dddddd",
-  ext = "png",
-}: ImageInfo, c: Context): Promise<Response>{
+async function sendImageBuffer(
+  {
+    width = 600,
+    height = 400,
+    textColor = "#999999",
+    bgColor = "#dddddd",
+    ext = "png",
+    is404 = false,
+  }: ImageInfo,
+  c: Context
+): Promise<Response> {
   let newWidth = Number(width) > 4000 ? 4000 : Number(width);
   let newHeight = Number(height) > 4000 ? 4000 : Number(height);
   const mimeType = mime.getType(ext);
+  console.log("🚀 ~ mimeType:", mimeType);
   const buffer = await generatePlaceholdImg({
     width: newWidth,
     height: newHeight,
     textColor,
     bgColor,
-    type: ext.replace(".", "") as keyof FormatEnum | AvailableFormatInfo,
-    is404: !mimeType
+    type: !mimeType
+      ? "png"
+      : (ext.replace(".", "") as keyof FormatEnum | AvailableFormatInfo),
+    is404: is404 || !mimeType,
   });
-  c.header("Content-Type", mimeType ?? 'image/png');
-  return c.body(buffer)
+  c.header("Content-Type", mimeType || "image/png");
+  return c.body(buffer);
 }
 
 serve({
