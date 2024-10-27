@@ -2,7 +2,7 @@ import { serve } from "@hono/node-server";
 import { Hono, type Context } from "hono";
 import sharp, { type AvailableFormatInfo, type FormatEnum } from "sharp";
 import mime from "mime";
-const app = new Hono().basePath("/api");
+const app = new Hono();
 interface ImageInfo  {
   width: number;
   height: number;
