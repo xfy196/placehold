@@ -26,7 +26,7 @@ app.get("/:param", async (c: Context) => {
    }, c)
   }
   // // 不是数字判断分割符号是否存在
-  match = param.match(/^(\d+)x(\d+)\.(\w+)?$/);
+  match = param.match(/^(\d+)x(\d+)(\.\w+)?$/);
   if (match) {
     const [, width, height, ext = "png"] = match;
     return await sendImageBuffer({
