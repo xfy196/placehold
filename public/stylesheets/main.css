@@ -1,0 +1,25 @@
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.container .bg-header {
+    position: absolute;
+    width: 100vw;
+    height: 600px;
+    background: rgb(55, 53, 53);
+}
+.container .header {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.container .title {
+    color: white;
+    font-size: 64px;
+}
