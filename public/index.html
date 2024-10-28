@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Placehold</title>
-    <link href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcdn.net/ajax/libs/picocss/2.0.6/pico.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/main.css">
-</head>
-<body>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/picocss/2.0.6/pico.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
     <div class="container">
+      <div class="top-box">
         <div class="header">
-            <hgroup style="text-align: center;">
-                <h1 class="title">Placehold</h1>
-                <p >A simple, fast and free image placeholder service.</p>
-              </hgroup>
-            <img src="/600x400/dfdfdf/000000" alt="placehold">
+          <hgroup style="text-align: center">
+            <h1 class="title">Placehold</h1>
+            <p>A simple, fast and free image placeholder service.</p>
+          </hgroup>
+          <img
+            class="animate__animated animate__fadeIn"
+            src="/600x400/dfdfdf/000000"
+            alt="placehold"
+          />
         </div>
         <div class="bg-header"></div>
+      </div>
+      <div class="content clearfix">
+        <div class="header">
+          <hgroup style="text-align: center">
+            <h1 class="title">Size</h1>
+            <p>
+              The size can be specified using the format
+              <strong>width</strong> x <strong>height</strong>:
+            </p>
+          </hgroup>
+          <a href="https://placehold.dtool.tech/600x400">
+            <div>https://placehold.dtool.tech/600x400</div>
+
+            <button>Copy</button>
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
