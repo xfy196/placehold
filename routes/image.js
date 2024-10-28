@@ -109,7 +109,7 @@ async function generatePlaceholdImg({ width = 600, height = 400, textColor = "#9
   });
   // 使用SVG叠加文字
   let fontSize = Math.min(width, height) / 6;
-  const textToSVG = TextToSVG.loadSync(path.join(__dirname, "../public/fonts/小米MiSans-Medium.ttf"));
+  const textToSVG = TextToSVG.loadSync(path.join(__dirname, "../fonts/小米MiSans-Medium.ttf"));
   const newText = is404 ? "4 0 4" : text ? text : width + " x " + height;
   const options = {
       fontSize,
