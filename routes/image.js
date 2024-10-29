@@ -3,6 +3,7 @@ const path = require("path")
 const sharp = require("sharp")
 const TextToSVG = require('text-to-svg')
 const {isValidHexColor} = require("../utils/color.js")
+const potrace = require("potrace")
 const mime = require("mime-types");
 router.get('/:param', async (ctx, next) => {
     const {param} = ctx.params;
@@ -194,15 +195,18 @@ async function generatePlaceholdImg({
         .join("");
     const svgText = `
       <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+      ${type === 'svg' ? `<rect width="100%" height="100%" fill="${bgColor}" />` : ''}
       ${svgPaths}
     </svg>
   `;
-    console.log(svgText)
-    const buffer = await image
-        .composite([{input: Buffer.from(svgText), gravity: "center"}])
-        .toFormat(type)
-        .toBuffer();
-    return buffer;
+    if (type !== 'svg') {
+        const buffer = await image
+            .composite([{input: Buffer.from(svgText), gravity: "center"}])
+            .toFormat(type)
+            .toBuffer();
+        return buffer;
+    }
+    return svgText
 }
 
 async function sendImageBuffer({

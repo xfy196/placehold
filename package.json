@@ -23,6 +23,7 @@
     "koa-static": "^5.0.0",
     "koa-views": "^6.2.0",
     "mime-types": "^2.1.35",
+    "potrace": "^2.1.8",
     "sharp": "^0.33.5",
     "text-to-svg": "^3.1.5"
   },
