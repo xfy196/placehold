@@ -1,55 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Placehold</title>
     <link
-      href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css"
-      rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css"
+            rel="stylesheet"
     />
     <link
-      href="https://cdn.bootcdn.net/ajax/libs/picocss/2.0.6/pico.min.css"
-      rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/picocss/2.0.6/pico.min.css"
+            rel="stylesheet"
     />
     <link
-      href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
-      rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
     />
-    <link rel="stylesheet" href="/stylesheets/main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="top-box">
+    <link rel="stylesheet" href="/stylesheets/main.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="top-box">
         <div class="header">
-          <hgroup style="text-align: center">
-            <h1 class="title">Placehold</h1>
-            <p>A simple, fast and free image placeholder service.</p>
-          </hgroup>
-          <img
-            class="animate__animated animate__fadeIn"
-            src="/600x400/dfdfdf/000000"
-            alt="placehold"
-          />
+            <hgroup style="text-align: center">
+                <h1 class="title">Placehold</h1>
+                <p>A simple, fast and free image placeholder service.</p>
+            </hgroup>
+            <img
+                    class="animate__animated animate__fadeIn"
+                    src="/600x400/dfdfdf/000000"
+                    alt="placehold"
+            />
         </div>
         <div class="bg-header"></div>
-      </div>
-      <div class="content clearfix">
-        <div class="header">
-          <hgroup style="text-align: center">
-            <h1 class="title">Size</h1>
-            <p>
-              The size can be specified using the format
-              <strong>width</strong> x <strong>height</strong>:
-            </p>
-          </hgroup>
-          <a href="https://placehold.dtool.tech/600x400">
-            <div>https://placehold.dtool.tech/600x400</div>
-
-            <button>Copy</button>
-          </a>
-        </div>
-      </div>
     </div>
-  </body>
+    <div class="content clearfix">
+        <div class="content-item">
+            <hgroup style="text-align: center">
+                <h1 class="title">Size</h1>
+                <p>
+                    The size can be specified using the format
+                    <strong>width</strong> x <strong>height</strong>:
+                </p>
+            </hgroup>
+            <div class="copy-item">
+                <div class="link-item">
+                    <a target="_blank" href="https://placehold.dtool.tech/600x400">
+                        <span> https://placehold.dtool.tech/600x400 </span>
+                    </a>
+                </div>
+                <div class="copy-btn" data-clipboard-text="https://placehold.dtool.tech/600x400" data-tooltip="Copy"
+                     data-placement="right">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-item">
+            <hgroup style="text-align: center">
+                <div></div>
+                <p>
+                    Specifying the height is optional, useful for creating a square:
+                </p>
+            </hgroup>
+            <div class="copy-item">
+                <div class="link-item">
+                    <a target="_blank" href="https://placehold.dtool.tech/600">
+                        <span> https://placehold.dtool.tech/600 </span>
+                    </a>
+                </div>
+                <div class="copy-btn" data-clipboard-text="https://placehold.dtool.tech/600" data-tooltip="Copy"
+                     data-placement="right">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <hgroup style="text-align: center">
+                <div></div>
+                <p>
+                    The maximum image size is 4000 x 4000 px.<br/>
+                    The minimum image size is 10 x 10 px.
+                </p>
+            </hgroup>
+        </div>
+        <div class="content-item">
+            <hgroup style="text-align: center">
+                <h1 class="title">Format</h1>
+                <p>
+                    The image format can be specified:
+                </p>
+            </hgroup>
+            <div class="copy-item">
+                <div class="link-item">
+                    <a target="_blank" href="https://placehold.dtool.tech/600x400/png">
+                        <span> https://placehold.dtool.tech/600x400/png </span>
+                    </a>
+                </div>
+                <div class="copy-btn" data-clipboard-text="https://placehold.dtool.tech/600x400/png" data-tooltip="Copy"
+                     data-placement="right">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="copy-item">
+                <div class="link-item">
+                    <a target="_blank" href="https://placehold.dtool.tech/600x400.png">
+                        <span> https://placehold.dtool.tech/600x400.png </span>
+                    </a>
+                </div>
+                <div class="copy-btn" data-clipboard-text="https://placehold.dtool.tech/600x400.png" data-tooltip="Copy"
+                     data-placement="right">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-item">
+            <hgroup style="text-align: center">
+                <div></div>
+                <p>
+                    Image formats can also be combined with colours:
+                </p>
+            </hgroup>
+            <div class="copy-item">
+                <div class="link-item">
+                    <a target="_blank" href="https://placehold.dtool.tech/600x400/000000/ffffff/png">
+                        <span> https://placehold.dtool.tech/600x400/000000/ffffff/png </span>
+                    </a>
+                </div>
+                <div class="copy-btn" data-clipboard-text="https://placehold.dtool.tech/600x400/000000/ffffff/png"
+                     data-tooltip="Copy" data-placement="right">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="copy-item">
+                <div class="link-item">
+                    <a target="_blank" href="https://placehold.dtool.tech/600x400/000000/ffffff.png">
+                        <span> https://placehold.dtool.tech/600x400/000000/ffffff.png </span>
+                    </a>
+                </div>
+                <div class="copy-btn" data-clipboard-text="https://placehold.dtool.tech/600x400/000000/ffffff.png"
+                     data-tooltip="Copy" data-placement="right">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <hgroup style="margin-top: 8px;">
+                <div></div>
+                <p>Supported formats are PNG, JPEG, GIF and WebP.</p>
+            </hgroup>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script src="/javascripts/main.js"></script>
+</body>
 </html>
