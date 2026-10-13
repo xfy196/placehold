@@ -81,6 +81,18 @@ function onError(error) {
 
 function onListening() {
     var addr = server.address();
-    var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
-    debug("Listening on " + bind);
+    if (typeof addr === "string") {
+        console.log("Placehold listening on pipe " + addr);
+        debug("Listening on pipe " + addr);
+        return;
+    }
+    var host = addr.address === "::" || addr.address === "0.0.0.0"
+        ? "localhost"
+        : addr.address;
+    var url = "http://" + host + ":" + addr.port;
+    console.log("Placehold server started");
+    console.log("  Port: " + addr.port);
+    console.log("  API:  " + url);
+    console.log("  Docs: " + url + "/");
+    debug("Listening on " + url);
 }

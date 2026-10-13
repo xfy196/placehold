@@ -6,7 +6,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "prd": "pm2 start index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node scripts/smoke-test.js",
     "build": "node index.js"
   },
   "dependencies": {
@@ -22,8 +22,6 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa-views": "^6.2.0",
-    "mime-types": "^2.1.35",
-    "potrace": "^2.1.8",
     "sharp": "^0.33.5",
     "text-to-svg": "^3.1.5"
   },
