@@ -1,194 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Placehold</title>
-    <link
-            href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css"
-            rel="stylesheet"
-    />
-    <link
-            href="https://cdn.bootcdn.net/ajax/libs/picocss/2.0.6/pico.min.css"
-            rel="stylesheet"
-    />
-    <link
-            href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
-            rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/stylesheets/main.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Placehold — a simple, fast, free image placeholder service. Size, color, format, and text via URL."/>
+  <title>Placehold</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/stylesheets/main.css"/>
 </head>
 <body>
-<div class="main">
-    <div class="top-box">
-        <div class="container header">
-            <hgroup style="text-align: center">
-                <h1 class="title">Placehold</h1>
-                <p>A simple, fast and free image placeholder service.</p>
-            </hgroup>
-            <img
-                    class="animate__animated animate__fadeIn"
-                    src="/600x400/dfdfdf/000000"
-                    alt="placehold"
-            />
-        </div>
-        <div class="bg-header"></div>
-    </div>
-    <div class="content clearfix">
-        <div class="content-item">
-            <hgroup style="text-align: center">
-                <h1 class="title">Size</h1>
-                <p>
-                    The size can be specified using the format
-                    <strong>width</strong> x <strong>height</strong>:
-                </p>
-            </hgroup>
-            <div class="copy-item">
-                <div class="link-item">
-                    <a target="_blank" href="https://placehold.xxytime.top/600x400">
-                        <span> https://placehold.xxytime.top/600x400 </span>
-                    </a>
-                </div>
-                <div class="copy-btn" data-clipboard-text="https://placehold.xxytime.top/600x400" data-tooltip="Copy"
-                     data-placement="right">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
-                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
+  <div class="grain" aria-hidden="true"></div>
 
-        </div>
-        <div class="content-item">
-            <hgroup style="text-align: center">
-                <div></div>
-                <p>
-                    Specifying the height is optional, useful for creating a square:
-                </p>
-            </hgroup>
-            <div class="copy-item">
-                <div class="link-item">
-                    <a target="_blank" href="https://placehold.xxytime.top/600">
-                        <span> https://placehold.xxytime.top/600 </span>
-                    </a>
-                </div>
-                <div class="copy-btn" data-clipboard-text="https://placehold.xxytime.top/600" data-tooltip="Copy"
-                     data-placement="right">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
-                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div class="content-item">
-            <hgroup style="text-align: center">
-                <div></div>
-                <p>
-                    The maximum image size is 4000 x 4000 px.<br/>
-                    The minimum image size is 10 x 10 px.
-                </p>
-            </hgroup>
-        </div>
-        <div class="content-item">
-            <hgroup style="text-align: center">
-                <h1 class="title">Format</h1>
-                <p>
-                    The image format can be specified:
-                </p>
-            </hgroup>
-            <div class="copy-item">
-                <div class="link-item">
-                    <a target="_blank" href="https://placehold.xxytime.top/600x400/png">
-                        <span> https://placehold.xxytime.top/600x400/png </span>
-                    </a>
-                </div>
-                <div class="copy-btn" data-clipboard-text="https://placehold.xxytime.top/600x400/png" data-tooltip="Copy"
-                     data-placement="right">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
-                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <div class="copy-item">
-                <div class="link-item">
-                    <a target="_blank" href="https://placehold.xxytime.top/600x400.png">
-                        <span> https://placehold.xxytime.top/600x400.png </span>
-                    </a>
-                </div>
-                <div class="copy-btn" data-clipboard-text="https://placehold.xxytime.top/600x400.png" data-tooltip="Copy"
-                     data-placement="right">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
-                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
+  <header class="site-header">
+    <a class="logo" href="/">Placehold</a>
+    <a class="header-link" href="#docs">Docs</a>
+  </header>
 
+  <main>
+    <section class="hero">
+      <h1 class="brand reveal" style="--d: 0ms">Placehold</h1>
+      <div class="hero-body">
+        <div class="hero-copy">
+          <p class="headline reveal" style="--d: 80ms">Placeholder images, by URL.</p>
+          <p class="lede reveal" style="--d: 140ms">
+            Simple, fast, and free. Specify size, colors, format, and text — get an image instantly.
+          </p>
+          <div class="cta-row reveal" style="--d: 200ms">
+            <button type="button" class="btn btn-primary" data-copy-path="/600x400" aria-label="Copy starter URL">
+              Copy starter URL
+            </button>
+            <a class="btn btn-ghost" href="#docs">See how it works</a>
+          </div>
         </div>
-        <div class="content-item">
-            <hgroup style="text-align: center">
-                <div></div>
-                <p>
-                    Image formats can also be combined with colours:
-                </p>
-            </hgroup>
-            <div class="copy-item">
-                <div class="link-item">
-                    <a target="_blank" href="https://placehold.xxytime.top/600x400/000000/ffffff/png">
-                        <span> https://placehold.xxytime.top/600x400/000000/ffffff/png </span>
-                    </a>
-                </div>
-                <div class="copy-btn" data-clipboard-text="https://placehold.xxytime.top/600x400/000000/ffffff/png"
-                     data-tooltip="Copy" data-placement="right">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
-                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <div class="copy-item">
-                <div class="link-item">
-                    <a target="_blank" href="https://placehold.xxytime.top/600x400/000000/ffffff.png">
-                        <span> https://placehold.xxytime.top/600x400/000000/ffffff.png </span>
-                    </a>
-                </div>
-                <div class="copy-btn" data-clipboard-text="https://placehold.xxytime.top/600x400/000000/ffffff.png"
-                     data-tooltip="Copy" data-placement="right">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="8" y="8" width="12" height="12" rx="2"></rect>
-                            <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <hgroup style="margin-top: 8px;">
-                <div></div>
-                <p>Supported formats are SVG, PNG, JPEG, GIF and WebP.</p>
-            </hgroup>
+        <div class="hero-visual reveal" style="--d: 260ms">
+          <img
+            class="hero-preview"
+            src="/960x540/1a1a1a/f7f5f2?text=960+%C3%97+540"
+            alt="Example placeholder image 960 by 540"
+            width="960"
+            height="540"
+          />
         </div>
-    </div>
-</div>
-<script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
-<script src="/javascripts/main.js"></script>
+      </div>
+    </section>
+
+    <section class="anatomy" id="docs" aria-labelledby="anatomy-title">
+      <div class="section-head">
+        <h2 id="anatomy-title">How it works</h2>
+        <p>Compose a path. Open it. That’s the image.</p>
+      </div>
+      <div class="anatomy-bar" aria-hidden="true">
+        <span class="seg seg-origin">your.host</span>
+        <span class="seg seg-size">/600x400</span>
+        <span class="seg seg-bg">/1a1a1a</span>
+        <span class="seg seg-fg">/f7f5f2</span>
+        <span class="seg seg-fmt">.png</span>
+        <span class="seg seg-query">?text=Hello</span>
+      </div>
+      <ul class="anatomy-legend">
+        <li><span class="dot size"></span> Size</li>
+        <li><span class="dot bg"></span> Background</li>
+        <li><span class="dot fg"></span> Text color</li>
+        <li><span class="dot fmt"></span> Format</li>
+        <li><span class="dot query"></span> Custom text</li>
+      </ul>
+    </section>
+
+    <section class="doc-section" aria-labelledby="size-title">
+      <div class="section-head">
+        <h2 id="size-title">Size</h2>
+        <p>Use <strong>width×height</strong>, or a single number for a square. Min 10×10, max 4000×4000.</p>
+      </div>
+      <div class="example-list">
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400" target="_blank" rel="noopener">/600x400</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400" aria-label="Copy /600x400">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb" src="/120x80" alt="" width="120" height="80" loading="lazy"/>
+        </div>
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600" target="_blank" rel="noopener">/600</a>
+            <button type="button" class="copy-btn" data-copy-path="/600" aria-label="Copy /600">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb thumb-sq" src="/80" alt="" width="80" height="80" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-section" aria-labelledby="color-title">
+      <div class="section-head">
+        <h2 id="color-title">Colors</h2>
+        <p>Append background and text colors as hex without <code>#</code>.</p>
+      </div>
+      <div class="example-list">
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400/dfdfdf/000000" target="_blank" rel="noopener">/600x400/dfdfdf/000000</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400/dfdfdf/000000" aria-label="Copy color example">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb" src="/120x80/dfdfdf/000000" alt="" width="120" height="80" loading="lazy"/>
+        </div>
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400/e85d04/ffffff" target="_blank" rel="noopener">/600x400/e85d04/ffffff</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400/e85d04/ffffff" aria-label="Copy accent color example">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb" src="/120x80/e85d04/ffffff" alt="" width="120" height="80" loading="lazy"/>
+        </div>
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400/1a1a1a/f7f5f2" target="_blank" rel="noopener">/600x400/1a1a1a/f7f5f2</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400/1a1a1a/f7f5f2" aria-label="Copy dark color example">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb" src="/120x80/1a1a1a/f7f5f2" alt="" width="120" height="80" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-section" aria-labelledby="format-title">
+      <div class="section-head">
+        <h2 id="format-title">Format</h2>
+        <p>SVG, PNG, JPEG, GIF, and WebP — as a path segment or file extension. Combine with colors.</p>
+      </div>
+      <div class="example-list">
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400/png" target="_blank" rel="noopener">/600x400/png</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400/png" aria-label="Copy PNG path format">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+        </div>
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400.webp" target="_blank" rel="noopener">/600x400.webp</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400.webp" aria-label="Copy WebP extension format">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+        </div>
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400/000000/ffffff/png" target="_blank" rel="noopener">/600x400/000000/ffffff/png</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400/000000/ffffff/png" aria-label="Copy format with colors">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb" src="/120x80/000000/ffffff" alt="" width="120" height="80" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-section" aria-labelledby="text-title">
+      <div class="section-head">
+        <h2 id="text-title">Custom text</h2>
+        <p>Override the default size label with <code>?text=</code>. Use <code>+</code> for spaces.</p>
+      </div>
+      <div class="example-list">
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/600x400?text=Hello+World" target="_blank" rel="noopener">/600x400?text=Hello+World</a>
+            <button type="button" class="copy-btn" data-copy-path="/600x400?text=Hello+World" aria-label="Copy custom text example">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb" src="/120x80?text=Hello" alt="" width="120" height="80" loading="lazy"/>
+        </div>
+        <div class="example-row">
+          <div class="url-chip">
+            <a class="url-path" href="/800x200/eeeeee/222222.png?text=Banner" target="_blank" rel="noopener">/800x200/eeeeee/222222.png?text=Banner</a>
+            <button type="button" class="copy-btn" data-copy-path="/800x200/eeeeee/222222.png?text=Banner" aria-label="Copy banner text example">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+          <img class="thumb thumb-wide" src="/160x40/eeeeee/222222.png?text=Banner" alt="" width="160" height="40" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Min 10×10 · Max 4000×4000 · SVG / PNG / JPEG / GIF / WebP</p>
+    <p class="footer-meta">Placehold · MIT</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="/javascripts/main.js"></script>
 </body>
 </html>
